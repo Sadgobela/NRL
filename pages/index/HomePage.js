@@ -1,5 +1,6 @@
 import React from 'react';
-import HomePageLayout from "../../components/layouts/HomePageLayout";
+import HomePageLayout from "../../components/layouts/home/HomePageLayout";
+import './HomePage.scss';
 // import PropTypes from 'prop-types';
 function HomePage() {
     return (
