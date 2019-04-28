@@ -6,15 +6,20 @@ import createStore from '../store/store';
 import 'bootstrap/scss/bootstrap.scss';
 import '../styles/index.scss';
 import Head from 'next/head';
+import {setActiveRoute} from "../store/actions/routerActions";
 class Root extends App {
-    static async getInitialProps({ Component, ctx }) {
+    static async getInitialProps({ Component, ctx, req }) {
         let pageProps = {};
 
         if (Component.getInitialProps) {
             pageProps = await Component.getInitialProps({ ctx });
         }
 
-        return { pageProps};
+        console.log(ctx.pathname);
+
+        await ctx.store.dispatch(setActiveRoute(ctx.pathname));
+
+        return { pageProps, query: ctx.query};
     }
 
     render() {
