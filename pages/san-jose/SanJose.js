@@ -6,6 +6,7 @@ import {getSearchData} from "../../store/actions/searchActions";
 import EventItem from "./component/EventItem";
 import {Container, Row} from "reactstrap";
 import './SanJose.scss';
+import Pagination from "../../components/fragments/pagination/Pagination";
 
 function SanJose({data, isPending}) {
 
@@ -19,12 +20,20 @@ function SanJose({data, isPending}) {
         <DefaultPageLayout>
            <div className='jan-jose-page'>
                <Container>
-                   <div className="main-poster">
-                       <img src="/static/img/main-poster.png" alt=""/>
+                   <div className="outer-page">
+                       <div className="main-poster">
+                           <img src="/static/img/main-poster.png" alt=""/>
+                       </div>
+                       <div className='inner-page'>
+                           <p className='page-title'>
+                               Discover those events near you:
+                           </p>
+                           <Row>
+                               {data && data.map(event => <EventItem key={event.id} event={event}/>)}
+                           </Row>
+                           <Pagination pages={2}/>
+                       </div>
                    </div>
-                   <Row>
-                       {data && data.map(event => <EventItem key={event.id} event={event}/>)}
-                   </Row>
                </Container>
            </div>
         </DefaultPageLayout>

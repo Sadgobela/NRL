@@ -2,9 +2,27 @@
   max-width: 100%;
   padding: 55px 85px;
   .main-poster{
-    margin-bottom: 40px;
     img{
       max-width: 100%;
+    }
+  }
+  .outer-page{
+    background-color: #fff;
+  }
+  .inner-page{
+    padding: 45px;
+    .page-title{
+      margin-bottom: 40px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .card{
+      border: 1px solid #9f9f9f;
+    }
+    .card, .card-img-top{
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
     }
   }
 }
