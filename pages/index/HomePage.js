@@ -14,6 +14,7 @@ function HomePage() {
   };
 
   const searchFormSubmitHandler = (e) => {
+    e.preventDefault();
     if(!q) return;
     console.log(q);
     Router.pushRoute(`/san-jose?q=${q}`);

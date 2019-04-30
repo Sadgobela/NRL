@@ -1,0 +1,29 @@
+@import "styles/variables";
+.event-details-page{
+  max-width: 100%;
+  padding: 55px 65px;
+  .return-btn-wrapper{
+    padding-bottom: 55px;
+  }
+  .event-poster{
+    height: 245px;
+    background-image: url("/static/img/details-poster.png");
+    background-size: cover;
+    .poster-title{
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .event-body{
+    border: 1px solid $event-details-body-border;
+    border-top: 0;
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 160px;
+    .event-title{
+      color: #000;
+      font-weight: bold;
+    }
+  }
+}
