@@ -3,19 +3,11 @@ import DefaultPageLayout from "../../components/layouts/default/DefaultPageLayou
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {getSearchData} from "../../store/actions/searchActions";
-import EventItem from "./component/EventItem";
-import {Container, Row} from "reactstrap";
+import {Container} from "reactstrap";
+import Events from "./component/Events";
 import './SanJose.scss';
-import Pagination from "../../components/fragments/pagination/Pagination";
 
 function SanJose({data, isPending}) {
-
-    // useEffect(() => {
-    //     if(!data){
-    //         getSearchData();
-    //     }
-    // }, [data]);
-
     return (
         <DefaultPageLayout>
            <div className='jan-jose-page'>
@@ -25,13 +17,16 @@ function SanJose({data, isPending}) {
                            <img src="/static/img/main-poster.png" alt=""/>
                        </div>
                        <div className='inner-page'>
-                           <p className='page-title'>
+                           <h3 className='page-title'>
                                Discover those events near you:
-                           </p>
-                           <Row>
-                               {data && data.map(event => <EventItem key={event.id} event={event}/>)}
-                           </Row>
-                           <Pagination pages={2}/>
+                           </h3>
+                           <Events events={data}/>
+                       </div>
+                       <div className='inner-page'>
+                           <h3 className='page-title'>
+                               All events:
+                           </h3>
+                           <Events events={data}/>
                        </div>
                    </div>
                </Container>

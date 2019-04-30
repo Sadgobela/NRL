@@ -1,24 +1,34 @@
 import React from "react";
-import { Pagination as BsPagination, PaginationItem, PaginationLink } from 'reactstrap';
+import {Pagination as BsPagination, PaginationItem, PaginationLink} from 'reactstrap';
 
-function Pagination({pages}) {
-    return(
-        <BsPagination aria-label="Page navigation example">
-            <PaginationItem>
-                <PaginationLink first href="#" />
-            </PaginationItem>
-            <PaginationItem>
-                <PaginationLink previous href="#" />
+function Pagination({pages, page, onChange}) {
+
+    const onPageChange = (newPage, e) => {
+        e && e.preventDefault();
+        if (newPage < 1 || page === newPage || pages < newPage) {
+            return false;
+        }
+        onChange(newPage);
+    };
+
+    return (
+        <BsPagination aria-label="Page navigation">
+            <PaginationItem disabled={page === 1}>
+                <PaginationLink onClick={(e) => {
+                    onPageChange(page - 1, e);
+                }} previous href="#"/>
             </PaginationItem>
             {Array(pages)
                 .fill(pages)
-                .map((page, index) => <PaginationItem><PaginationLink href="#">{index + 1}</PaginationLink>
-            </PaginationItem>)}
-            <PaginationItem>
-                <PaginationLink next href="#" />
-            </PaginationItem>
-            <PaginationItem>
-                <PaginationLink last href="#" />
+                .map((p, index) => <PaginationItem active={(index + 1) === page}>
+                    <PaginationLink href="#" onClick={(e) => {
+                        onPageChange(index + 1, e);
+                    }}>{index + 1}</PaginationLink>
+                </PaginationItem>)}
+            <PaginationItem disabled={page === pages}>
+                <PaginationLink onClick={(e) => {
+                    onPageChange(page + 1, e);
+                }} next href="#"/>
             </PaginationItem>
         </BsPagination>
     )

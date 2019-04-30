@@ -5,7 +5,9 @@ import './HomePage.scss';
 function HomePage() {
     return (
         <HomePageLayout>
-            <h1>Hello</h1>
+            <div className="search-input">
+                <img src="/static/img/background1.png" alt=""/>
+            </div>
         </HomePageLayout>
     )
 }
