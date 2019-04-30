@@ -3,11 +3,11 @@ import DefaultPageLayout from "../../components/layouts/default/DefaultPageLayou
 import PropTypes from 'prop-types';
 
 function Seattle() {
-    return (
-        <DefaultPageLayout>
-            <h1>Seattle</h1>
-        </DefaultPageLayout>
-    )
+  return (
+    <DefaultPageLayout>
+      <h1>Seattle</h1>
+    </DefaultPageLayout>
+  )
 }
 
 export default Seattle;

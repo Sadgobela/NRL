@@ -3,11 +3,11 @@ import DefaultPageLayout from "../../components/layouts/default/DefaultPageLayou
 import PropTypes from 'prop-types';
 
 function SanFrancisco() {
-    return (
-        <DefaultPageLayout>
-            <h1>San Francisco</h1>
-        </DefaultPageLayout>
-    )
+  return (
+    <DefaultPageLayout>
+      <h1>San Francisco</h1>
+    </DefaultPageLayout>
+  )
 }
 
 export default SanFrancisco;

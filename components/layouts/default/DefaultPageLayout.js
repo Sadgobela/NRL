@@ -6,17 +6,17 @@ import {LAYOUT_TYPES} from "../../../utils/constants";
 import './DefaultPageLayout.scss';
 
 function DefaultPageLayout({children}) {
-    return (
-        <main className='default-layout'>
-            <Header layoutType={LAYOUT_TYPES.default}/>
-            {children}
-            <Footer/>
-        </main>
-    )
+  return (
+    <main className='default-layout'>
+      <Header layoutType={LAYOUT_TYPES.default}/>
+      {children}
+      <Footer/>
+    </main>
+  )
 }
 
 DefaultPageLayout.propTypes = {
-    children: PropTypes.node
+  children: PropTypes.node
 };
 
 export default DefaultPageLayout;

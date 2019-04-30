@@ -8,42 +8,42 @@ import Events from "./component/Events";
 import './SanJose.scss';
 
 function SanJose({data, isPending}) {
-    return (
-        <DefaultPageLayout>
-           <div className='jan-jose-page'>
-               <Container>
-                   <div className="outer-page">
-                       <div className="main-poster">
-                           <img src="/static/img/main-poster.png" alt=""/>
-                       </div>
-                       <div className='inner-page'>
-                           <h3 className='page-title'>
-                               Discover those events near you:
-                           </h3>
-                           <Events events={data}/>
-                       </div>
-                       <div className='inner-page'>
-                           <h3 className='page-title'>
-                               All events:
-                           </h3>
-                           <Events events={data}/>
-                       </div>
-                   </div>
-               </Container>
-           </div>
-        </DefaultPageLayout>
-    )
+  return (
+    <DefaultPageLayout>
+      <div className='jan-jose-page'>
+        <Container>
+          <div className="outer-page">
+            <div className="main-poster">
+              <img src="/static/img/main-poster.png" alt=""/>
+            </div>
+            <div className='inner-page'>
+              <h3 className='page-title'>
+                Discover those events near you:
+              </h3>
+              <Events events={data}/>
+            </div>
+            <div className='inner-page'>
+              <h3 className='page-title'>
+                All events:
+              </h3>
+              <Events events={data}/>
+            </div>
+          </div>
+        </Container>
+      </div>
+    </DefaultPageLayout>
+  )
 }
 
 SanJose.getInitialProps = async ({ctx}) => {
-    const data = ctx.store.getState().search.data;
-    if(!data){
-        await ctx.store.dispatch(getSearchData());
-    }
+  const data = ctx.store.getState().search.data;
+  if (!data) {
+    await ctx.store.dispatch(getSearchData());
+  }
 };
 
 const mapStateToProps = state => ({
-    data: state.search.data,
+  data: state.search.data,
 });
 
 export default connect(mapStateToProps)(SanJose);
