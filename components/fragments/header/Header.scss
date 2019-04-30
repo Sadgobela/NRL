@@ -4,9 +4,18 @@
       background-color: transparent;
     }
   }
+  &.header-default{
+    nav {
+      padding-top: 0;
+      padding-bottom: 0;
+      .navbar-brand {
+        padding: 0;
+      }
+    }
+  }
   nav{
     background-color: #fff;
-    padding: 10px 65px;
+    padding: 20px 65px;
     .nav-item{
       .nav-link{
         color: #fb5a73;

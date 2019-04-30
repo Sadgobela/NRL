@@ -10,10 +10,12 @@ function HomePage() {
   const onChange = (e) => {
     const {value} = e.target;
     setQ(value);
+    console.log(q);
   };
 
   const searchFormSubmitHandler = (e) => {
     if(!q) return;
+    console.log(q);
     Router.pushRoute(`/san-jose?q=${q}`);
   };
 

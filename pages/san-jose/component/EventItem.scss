@@ -1,0 +1,30 @@
+.event-item{
+  &-attending{
+    position: relative;
+    margin-top: -25px;
+    font-weight: bold;
+    > span{
+      border-radius: 50%;
+      background-color: #fb5a73;
+      color: #fff;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  .card-title{
+    margin-bottom: 14px;
+    margin-top: 10px;
+  }
+  .card-subtitle{
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+  }
+  .card-body{
+    font-size: 12px;
+  }
+}

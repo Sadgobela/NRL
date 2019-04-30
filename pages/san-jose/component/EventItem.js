@@ -7,9 +7,15 @@ function EventItem({event}) {
   return (
     <Col lg={3}>
       <Link route={`/event/${event.id}`}>
-        <Card>
+        <Card className="event-item">
           <CardImg top width="100%" src={`${event.img}`} alt="image"/>
           <CardBody>
+            <div className="event-item-attending d-flex justify-content-end">
+              <div className="my-auto">Attending</div>
+              <span className="d-flex justify-content-center my-auto ml-2">
+                <span className="my-auto">{event.attend_count}</span>
+              </span>
+            </div>
             <CardTitle><h4>{event.title}</h4></CardTitle>
             <CardSubtitle>{event.sub_title}</CardSubtitle>
             <CardText>

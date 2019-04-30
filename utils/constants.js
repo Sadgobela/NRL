@@ -1,1 +1,1 @@
-export const LAYOUT_TYPES = {default: 'Seattle', home: 'home'};
+export const LAYOUT_TYPES = {default: 'default', home: 'home'};

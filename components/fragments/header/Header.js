@@ -5,8 +5,6 @@ import {Link} from '../../../routes';
 import {connect} from 'react-redux';
 import PropTypes from "prop-types";
 import {LAYOUT_TYPES} from "../../../utils/constants";
-import {setActiveRoute} from "../../../store/actions/routerActions";
-import {bindActionCreators} from "redux";
 
 function Header({layoutType, activeRoute}) {
   const [isOpen, setIsOpen] = useState(false);
