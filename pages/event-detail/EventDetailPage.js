@@ -22,9 +22,12 @@ function EventDetailPage({event}) {
           </div>
           <div className="event-body">
             <h2 className="event-title">{event.title}</h2>
-            <p><img src="/static/img/pin.svg" width={15}/> <em>{event.date}</em></p>
-            <p>{event.location}</p>
+            <p> <em>{event.date}</em></p>
+            <p><img src="/static/img/pin.svg" width={15}/> {event.location}</p>
             <div dangerouslySetInnerHTML={{__html: event.description}}/>
+            <button className="btn btn-primary btn-lg" type="button">
+              <span>Register</span>
+            </button>
           </div>
         </div>}
 

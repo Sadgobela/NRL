@@ -4,7 +4,7 @@ export const searchData = () => {
   for (let i = 1; i < 9; i++) {
     data.push({
       id: i,
-      title: `Event Title ${i}`,
+      title: `Blockchain Couples Meetup ${i}`,
       sub_title: `Event Sub Title Event Sub Title Event Sub Title ${i}`,
       img: `/static/img/poster${i}.png`,
       description: `<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
