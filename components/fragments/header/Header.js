@@ -47,7 +47,8 @@ function Header({layoutType, activeRoute}) {
 }
 
 Header.propTypes = {
-  layoutType: PropTypes.oneOf(Object.values(LAYOUT_TYPES)).isRequired
+  layoutType: PropTypes.oneOf(Object.values(LAYOUT_TYPES)).isRequired,
+  activeRoute: PropTypes.string.isRequired
 };
 
 const mapStateToProps = state => ({

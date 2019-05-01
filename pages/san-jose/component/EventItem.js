@@ -2,6 +2,7 @@ import React from "react";
 import {Card, CardBody, CardImg, CardText, CardTitle, Col, CardSubtitle} from "reactstrap";
 import {Link} from '../../../routes';
 import './EventItem.scss';
+import PropTypes from "prop-types";
 
 function EventItem({event}) {
   return (
@@ -30,5 +31,9 @@ function EventItem({event}) {
     </Col>
   );
 }
+
+EventItem.propTypes = {
+  event: PropTypes.object.isRequired,
+};
 
 export default EventItem;

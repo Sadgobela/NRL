@@ -1,4 +1,3 @@
-import React, {useEffect} from 'react';
 import DefaultPageLayout from "../../components/layouts/default/DefaultPageLayout";
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -7,7 +6,7 @@ import {Container} from "reactstrap";
 import Events from "./component/Events";
 import './SanJose.scss';
 
-function SanJose({data, isPending}) {
+function SanJose({data}) {
   return (
     <DefaultPageLayout>
       <div className='jan-jose-page'>
@@ -40,6 +39,10 @@ SanJose.getInitialProps = async ({ctx}) => {
   if (!data) {
     await ctx.store.dispatch(getSearchData());
   }
+};
+
+SanJose.propTypes = {
+  data: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = state => ({

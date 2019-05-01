@@ -3,20 +3,17 @@ import HomePageLayout from "../../components/layouts/home/HomePageLayout";
 import {Router} from '../../routes';
 import './HomePage.scss';
 
-// import PropTypes from 'prop-types';
 function HomePage() {
   const [q, setQ] = useState('');
 
   const onChange = (e) => {
     const {value} = e.target;
     setQ(value);
-    console.log(q);
   };
 
   const searchFormSubmitHandler = (e) => {
     e.preventDefault();
     if(!q) return;
-    console.log(q);
     Router.pushRoute(`/san-jose?q=${q}`);
   };
 

@@ -1,6 +1,4 @@
-import React from 'react';
 import DefaultPageLayout from "../../components/layouts/default/DefaultPageLayout";
-import PropTypes from 'prop-types';
 
 function SanFrancisco() {
   return (

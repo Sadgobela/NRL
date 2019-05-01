@@ -1,4 +1,5 @@
 import {Pagination as BsPagination, PaginationItem, PaginationLink} from 'reactstrap';
+import PropTypes from "prop-types";
 
 function Pagination({pages, page, onChange}) {
 
@@ -32,5 +33,11 @@ function Pagination({pages, page, onChange}) {
     </BsPagination>
   )
 }
+
+Pagination.propTypes = {
+  pages: PropTypes.number.isRequired,
+  page: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired
+};
 
 export default Pagination;

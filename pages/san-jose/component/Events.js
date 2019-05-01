@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Pagination from "../../../components/fragments/pagination/Pagination";
 import EventItem from "./EventItem";
 import {Row} from "reactstrap";
+import PropTypes from "prop-types";
 
 function Events({events}) {
   const [search, setSearch] = useState(Events.initialSearchState);
@@ -13,8 +14,8 @@ function Events({events}) {
   if (!events) return null;
 
   const pages = Math.ceil(events.length / search.perPage);
-  const sliceStart = (search.page * search.perPage) - search.perPage;
   const sliceEnd = (search.page * search.perPage);
+  const sliceStart = sliceEnd - search.perPage;
   return (
     <div className="events">
       <Row>
@@ -28,6 +29,10 @@ function Events({events}) {
     </div>
   );
 }
+
+Events.propTypes = {
+  events: PropTypes.array.isRequired,
+};
 
 Events.initialSearchState = {page: 1, perPage: 4};
 

@@ -23,7 +23,7 @@ function EventDetailPage({event}) {
           <div className="event-body">
             <h2 className="event-title">{event.title}</h2>
             <p> <em>{event.date}</em></p>
-            <p><img src="/static/img/pin.svg" width={15}/> {event.location}</p>
+            <p><img src="/static/img/pin.svg" width={15} alt={event.title}/> {event.location}</p>
             <div dangerouslySetInnerHTML={{__html: event.description}}/>
             <button className="btn btn-primary btn-lg" type="button">
               <span>Register</span>
@@ -48,6 +48,10 @@ EventDetailPage.getInitialProps = async ({ctx}) => {
   const event = data.find(event => event.id === parseInt(ctx.query.id));
 
   return {event}
+};
+
+EventDetailPage.propTypes = {
+  event: PropTypes.object.isRequired,
 };
 
 export default EventDetailPage;
