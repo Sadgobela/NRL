@@ -1,6 +1,9 @@
 .jan-jose-page{
   max-width: 100%;
   padding: 55px 65px;
+  @media(max-width: 991px){
+    padding: 25px 0;
+  }
   .main-poster{
     img{
       max-width: 100%;

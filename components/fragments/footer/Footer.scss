@@ -1,4 +1,27 @@
 .page-footer{
   background-color: #fff;
   padding: 10px 24px;
+  @media(max-width: 991px){
+    display: block!important;
+    .contact-logo{
+      margin-right: 0!important;
+      text-align: center;
+      margin-top: 15px!important;
+    }
+  }
+  .contact-email{
+    a{
+      color: #0a4159;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @media (max-width: 991px){
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 15px!important;
+      margin-bottom: 15px!important;
+    }
+  }
 }

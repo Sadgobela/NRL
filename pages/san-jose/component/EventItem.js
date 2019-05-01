@@ -5,7 +5,7 @@ import './EventItem.scss';
 
 function EventItem({event}) {
   return (
-    <Col lg={3}>
+    <Col lg={6} sm={12} md={6} xl={3} xs={12}>
       <Link route={`/event/${event.id}`}>
         <Card className="event-item">
           <CardImg top width="100%" src={`${event.img}`} alt="image"/>

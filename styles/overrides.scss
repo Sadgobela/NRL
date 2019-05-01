@@ -1,5 +1,22 @@
 @media (min-width: 1200px) {
   .container {
-    max-width: 100%;
+    max-width: 1440px;
+  }
+}
+
+.page-item.active .page-link{
+  background-color: #fb5a73;
+  border-color: #fb5a73;
+}
+
+.page-link{
+  color: #fb5a73;
+  &:hover{
+    background-color: #fb5a73;
+    border-color: #fb5a73;
+    color: #fff;
+  }
+  &:focus{
+    box-shadow: none;
   }
 }
