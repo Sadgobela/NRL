@@ -2,6 +2,9 @@
 .event-details-page{
   max-width: 100%;
   padding: 55px 65px;
+  @media (max-width: 767px){
+    padding: 55px 25px;
+  }
   .return-btn-wrapper{
     padding-bottom: 55px;
   }
@@ -13,6 +16,7 @@
       color: #fff;
       font-weight: bold;
       text-transform: uppercase;
+      text-align: center;
     }
   }
   .event-body{
@@ -21,6 +25,12 @@
     background-color: #fff;
     text-align: center;
     padding: 60px 160px;
+    @media (max-width: 991px){
+      padding: 60px;
+    }
+    @media (max-width: 767px){
+      padding: 60px 25px;
+    }
     .event-title{
       color: #000;
       font-weight: bold;
