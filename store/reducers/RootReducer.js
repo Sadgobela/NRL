@@ -1,8 +1,8 @@
 // IMPORT PACKAGE REFERENCES
 
 import { combineReducers } from 'redux';
-import SearchReducer from "./SearchReducer";
-import RouterReducer from "./RouterReducer";
+import SearchReducer from './SearchReducer';
+import RouterReducer from './RouterReducer';
 
 // IMPORT REDUCERS
 

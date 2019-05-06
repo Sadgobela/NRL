@@ -1,4 +1,4 @@
-import actionTypes from "./actionTypes";
+import actionTypes from './actionTypes';
 
 export function setActiveRoute(route) {
     return {
@@ -6,5 +6,5 @@ export function setActiveRoute(route) {
         payload: new Promise((resolve) => {
             resolve(route);
         })
-    }
+    };
 }

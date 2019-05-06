@@ -1,1 +1,1 @@
-export {default} from './EventDetailPage'
+export {default} from './EventDetailPage';
